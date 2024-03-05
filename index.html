@@ -5,9 +5,31 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/style.css" />
   </head>
-  <body>
-    <h1 class="text-3xl font-bold underline">Hello world!</h1>
+  <body class="grid place-content-center min-h-[100vh] bg-main-bg text-text-1">
+    <main class="container w-[327px]">
+      <header class="flex justify-between mb-[32px]">
+        <h1 class="ml-[7px] text-size-4">calc</h1>
+        <div class="flex items-end text-size-1">
+          THEME
+          <div
+            class="relative flex items-center w-[71px] h-[26px] ml-[26px] bg-toogle-bg rounded-[13px] after:content-[''] after:block after:ml-[5px] after:size-[16px] after:bg-toggle after:rounded-[50%] before:content-['123'] before:absolute before:top-[-30px] before:w-[71px] before:text-center before:tracking-[10px]"
+          ></div>
+        </div>
+      </header>
+      <div
+        class="screen bg-screen-bg rounded-[10px] px-[24px] pt-[29px] pb-[22px] text-size-5 text-right"
+      >
+        00,00
+      </div>
+    </main>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
