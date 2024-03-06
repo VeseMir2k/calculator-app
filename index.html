@@ -15,19 +15,130 @@
   </head>
   <body class="grid place-content-center min-h-[100vh] bg-main-bg text-text-1">
     <main class="container w-[327px]">
-      <header class="flex justify-between mb-[32px]">
+      <header class="relative flex justify-between mb-[32px]">
         <h1 class="ml-[7px] text-size-4">calc</h1>
-        <div class="flex items-end text-size-1">
-          THEME
-          <div
-            class="relative flex items-center w-[71px] h-[26px] ml-[26px] bg-toogle-bg rounded-[13px] after:content-[''] after:block after:ml-[5px] after:size-[16px] after:bg-toggle after:rounded-[50%] before:content-['123'] before:absolute before:top-[-30px] before:w-[71px] before:text-center before:tracking-[10px]"
-          ></div>
-        </div>
+        <div class="absolute right-[97px] text-size-1">THEME</div>
+        <div
+          class="relative flex items-center self-end w-[71px] h-[26px] ml-[26px] rounded-[13px] bg-toogle-bg after:content-[''] after:absolute after:right-[5px] after:block after:size-[16px] after:rounded-[50%] after:bg-toggle after:cursor-pointer before:content-['123'] before:absolute before:top-[-30px] before:tracking-[18px] before:pl-[10px] before:text-size-1"
+        ></div>
       </header>
+      <input
+        placeholder="0,00"
+        disabled
+        class="screen placeholder:text-text-1 outline-none w-[327px] mb-[24px] px-[24px] pt-[29px] pb-[22px] rounded-[10px] bg-screen-bg text-size-5 text-right"
+      />
+
       <div
-        class="screen bg-screen-bg rounded-[10px] px-[24px] pt-[29px] pb-[22px] text-size-5 text-right"
+        class="keypad grid grid-cols-4 gap-[13px] p-[24px] rounded-[10px] bg-keypad-bg text-size-4"
       >
-        00,00
+        <button
+          data-key="7"
+          class="h-[64px] rounded-[5px] text-text-2 shadow-shadow-1 bg-key-bg-3 hover:bg-key-bg-hover-3"
+        >
+          7
+        </button>
+        <button
+          data-key="8"
+          class="h-[64px] rounded-[5px] text-text-2 shadow-shadow-1 bg-key-bg-3 hover:bg-key-bg-hover-3"
+        >
+          8
+        </button>
+        <button
+          data-key="9"
+          class="h-[64px] rounded-[5px] text-text-2 shadow-shadow-1 bg-key-bg-3 hover:bg-key-bg-hover-3"
+        >
+          9
+        </button>
+        <button
+          data-key="DEL"
+          class="h-[64px] rounded-[5px] text-text-3 text-size-2 shadow-shadow-2 bg-key-bg-1 hover:bg-key-bg-hover-1"
+        >
+          DEL
+        </button>
+        <button
+          data-key="4"
+          class="h-[64px] rounded-[5px] text-text-2 shadow-shadow-1 bg-key-bg-3 hover:bg-key-bg-hover-3"
+        >
+          4
+        </button>
+        <button
+          data-key="5"
+          class="h-[64px] rounded-[5px] text-text-2 shadow-shadow-1 bg-key-bg-3 hover:bg-key-bg-hover-3"
+        >
+          5
+        </button>
+        <button
+          data-key="6"
+          class="h-[64px] rounded-[5px] text-text-2 shadow-shadow-1 bg-key-bg-3 hover:bg-key-bg-hover-3"
+        >
+          6
+        </button>
+        <button
+          data-key="+"
+          class="h-[64px] rounded-[5px] text-text-2 shadow-shadow-1 bg-key-bg-3 hover:bg-key-bg-hover-3"
+        >
+          +
+        </button>
+        <button
+          data-key="1"
+          class="h-[64px] rounded-[5px] text-text-2 shadow-shadow-1 bg-key-bg-3 hover:bg-key-bg-hover-3"
+        >
+          1
+        </button>
+        <button
+          data-key="2"
+          class="h-[64px] rounded-[5px] text-text-2 shadow-shadow-1 bg-key-bg-3 hover:bg-key-bg-hover-3"
+        >
+          2
+        </button>
+        <button
+          data-key="3"
+          class="h-[64px] rounded-[5px] text-text-2 shadow-shadow-1 bg-key-bg-3 hover:bg-key-bg-hover-3"
+        >
+          3
+        </button>
+        <button
+          data-key="-"
+          class="h-[64px] rounded-[5px] text-text-2 shadow-shadow-1 bg-key-bg-3 hover:bg-key-bg-hover-3"
+        >
+          -
+        </button>
+        <button
+          data-key="."
+          class="h-[64px] rounded-[5px] text-text-2 shadow-shadow-1 bg-key-bg-3 hover:bg-key-bg-hover-3"
+        >
+          .
+        </button>
+        <button
+          data-key="0"
+          class="h-[64px] rounded-[5px] text-text-2 shadow-shadow-1 bg-key-bg-3 hover:bg-key-bg-hover-3"
+        >
+          0
+        </button>
+        <button
+          data-key="/"
+          class="h-[64px] rounded-[5px] text-text-2 shadow-shadow-1 bg-key-bg-3 hover:bg-key-bg-hover-3"
+        >
+          /
+        </button>
+        <button
+          data-key="*"
+          class="h-[64px] rounded-[5px] text-text-2 shadow-shadow-1 bg-key-bg-3 hover:bg-key-bg-hover-3"
+        >
+          *
+        </button>
+        <button
+          data-key="RESET"
+          class="col-span-2 h-[64px] rounded-[5px] text-text-1 text-size-2 shadow-shadow-2 bg-key-bg-1 hover:bg-key-bg-hover-1"
+        >
+          RESET
+        </button>
+        <button
+          data-key="="
+          class="col-span-2 h-[64px] rounded-[5px] text-text-1 text-size-2 shadow-shadow-3 bg-key-bg-2 hover:bg-key-bg-hover-2"
+        >
+          =
+        </button>
       </div>
     </main>
     <script type="module" src="/src/main.ts"></script>
