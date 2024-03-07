@@ -7,38 +7,75 @@ const toggleBtn = document.querySelectorAll<HTMLElement>('.toggle div');
 const screenEl = document.querySelector('.screen') as HTMLInputElement;
 let operation: string = '';
 
-keys.forEach(key => {
-  key.addEventListener('click', () => {
-    const valueKey = key.dataset.key;
+const handleKey = () => {
+  keys.forEach(key => {
+    key.addEventListener('click', () => {
+      const valueKey: any = key.dataset.key;
 
-    if (valueKey === '=') {
-      let result: number = +math.evaluate(operation);
-      return (screenEl.value = result.toFixed(3));
-    } else if (valueKey === 'RESET') {
-      operation = '';
-    } else if (valueKey === 'DEL') {
-    } else {
-      operation += valueKey;
-    }
-
-    screenEl.value = operation;
+      if (valueKey === '=') {
+        handleResultKey();
+      } else if (valueKey === 'RESET') {
+        handleResetKey();
+      } else if (valueKey === 'DEL') {
+        handleDelKey();
+      } else {
+        handleOtherKey(valueKey);
+      }
+    });
   });
-});
+};
 
-toggleBtn.forEach((btn, index) => {
-  btn.addEventListener('click', () => {
-    if (index === 1) {
-      document.documentElement.setAttribute('data-theme', 'light');
-      dot.classList.remove('theme-purple');
-      dot.classList.add('theme-light');
-    } else if (index === 2) {
-      document.documentElement.setAttribute('data-theme', 'purple');
-      dot.classList.remove('theme-light');
-      dot.classList.add('theme-purple');
-    } else {
-      document.documentElement.removeAttribute('data-theme');
-      dot.classList.remove('theme-purple');
-      dot.classList.remove('theme-light');
-    }
+const handleResultKey = () => {
+  if (operation.length > 0) {
+    let result: number = +math.evaluate(operation);
+    screenEl.value = result % 1 === 0 ? result.toFixed(0) : result.toFixed(2);
+  }
+};
+
+const handleResetKey = () => {
+  operation = '';
+  screenEl.value = operation;
+};
+
+const handleDelKey = () => {
+  const removeLastCharacter = operation.slice(0, -1);
+  operation = removeLastCharacter;
+};
+
+const handleOtherKey = (valueKey: string) => {
+  operation += valueKey;
+  screenEl.value = operation;
+};
+
+const handleToggleButton = () => {
+  toggleBtn.forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+      if (index === 1) {
+        updateTheme('theme-purple', 'theme-light', 'light');
+      } else if (index === 2) {
+        updateTheme('theme-light', 'theme-purple', 'purple');
+      } else {
+        resetTheme('theme-light', 'theme-purple');
+      }
+    });
   });
-});
+};
+
+const updateTheme = (remove: string, add: string, attributTheme: string) => {
+  document.documentElement.setAttribute('data-theme', attributTheme);
+  dot.classList.remove(remove);
+  dot.classList.add(add);
+};
+
+const resetTheme = (remove_1: string, remove_2: string) => {
+  document.documentElement.removeAttribute('data-theme');
+  dot.classList.remove(remove_1);
+  dot.classList.remove(remove_2);
+};
+
+const init = () => {
+  handleKey();
+  handleToggleButton();
+};
+
+init();
