@@ -1,32 +1,36 @@
 import { create, all } from 'mathjs';
 const math = create(all, {});
 
-const keys = document.querySelectorAll<HTMLElement>('.keypad button');
+const keys = document.querySelector('.keypad') as HTMLElement;
 const dot = document.querySelector('.toggle') as HTMLElement;
 const toggleBtn = document.querySelectorAll<HTMLElement>('.toggle div');
 const screenEl = document.querySelector('.screen') as HTMLInputElement;
 let operation: string = '';
 
 const handleKey = () => {
-  keys.forEach(key => {
-    key.addEventListener('click', () => {
-      const valueKey: any = key.dataset.key;
+  keys.addEventListener('click', event => {
+    const target = event.target as HTMLElement;
+    const valueKey: any = target.dataset.key;
 
-      if (valueKey === '=') {
-        handleResultKey();
-      } else if (valueKey === 'RESET') {
-        handleResetKey();
-      } else if (valueKey === 'DEL') {
-        handleDelKey();
-      } else {
-        handleOtherKey(valueKey);
-      }
-    });
+    if (valueKey === '=') {
+      handleResultKey();
+    } else if (valueKey === 'RESET') {
+      handleResetKey();
+    } else if (valueKey === 'DEL') {
+      handleDelKey();
+    } else {
+      handleOtherKey(valueKey);
+    }
   });
 };
 
 const handleResultKey = () => {
-  if (operation.length > 0) {
+  const characters = ['/', '*', '+', '-'];
+  let lastChar = operation.charAt(operation.length - 1);
+
+  let isValidOperation = characters.includes(lastChar);
+
+  if (!isValidOperation && operation.length > 0) {
     let result: number = +math.evaluate(operation);
     screenEl.value = result % 1 === 0 ? result.toFixed(0) : result.toFixed(2);
   }
