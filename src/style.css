@@ -3,6 +3,69 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --main: rgb(58, 71, 100);
+    --toogle: rgb(35, 44, 67);
+    --dot: rgb(208, 63, 47);
+    --dot-hover: rgb(249, 107, 91);
+    --keypad: rgb(35, 44, 67);
+    --screen: rgb(24, 31, 51);
+    --key-1: rgb(234, 227, 220);
+    --key-2: rgb(99, 112, 151);
+    --key-3: rgb(208, 63, 47);
+    --key-hover-1: rgb(255, 255, 255);
+    --key-hover-2: rgb(162, 178, 225);
+    --key-hover-3: rgb(249, 107, 91);
+    --key-shadow-1: rgb(180, 165, 151);
+    --key-shadow-2: rgb(64, 78, 114);
+    --key-shadow-3: rgb(147, 38, 26);
+    --text-header-screen: rgb(255, 255, 255);
+    --text-1: rgb(68, 75, 90);
+    --text-2: rgb(255, 255, 255);
+    --text-3: rgb(255, 255, 255);
+  }
+
+  html[data-theme="light"] {
+    --main: rgb(230, 230, 230);
+    --toogle: rgb(209, 204, 204);
+    --dot: rgb(200, 84, 2);
+    --dot-hover: rgb(255, 138, 56);
+    --keypad: rgb(209, 204, 204);
+    --screen: rgb(237, 237, 237);
+    --key-1: rgb(229, 228, 225);
+    --key-2: rgb(55, 127, 134);
+    --key-3: rgb(202, 85, 2);
+    --key-hover-2: rgb(98, 181, 188);
+    --key-hover-3: rgb(255, 138, 56);
+    --key-shadow-1: rgb(166, 157, 145);
+    --key-shadow-2: rgb(27, 95, 101);
+    --key-shadow-3: rgb(137, 57, 1);
+    --text-header-screen: rgb(54, 54, 44);
+    --text-1: rgb(54, 54, 43);
+  }
+
+  html[data-theme="purple"] {
+    --main: rgb(22, 6, 40);
+    --toogle: rgb(29, 9, 52);
+    --dot: rgb(0, 224, 209);
+    --dot-hover: hwb(176 58% 0%);
+    --keypad: rgb(29, 9, 52);
+    --screen: rgb(29, 9, 52);
+    --key-1: rgb(52, 28, 79);
+    --key-2: rgb(88, 7, 125);
+    --key-3: rgb(0, 224, 209);
+    --key-hover-1: rgb(108, 52, 172);
+    --key-hover-2: rgb(134, 49, 175);
+    --key-hover-3: rgb(147, 255, 248);
+    --key-shadow-1: rgb(135, 28, 156);
+    --key-shadow-2: rgb(188, 21, 244);
+    --key-shadow-3: rgb(108, 249, 242);
+    --text-header-screen: rgb(255, 229, 61);
+    --text-1: rgb(255, 229, 61);
+    --text-2: rgb(255, 255, 255);
+    --text-3: rgb(27, 36, 40);
+  }
+
   html {
     font-family: "League Spartan", sans-serif;
     font-optical-sizing: auto;

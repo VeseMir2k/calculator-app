@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="purple">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
@@ -13,129 +13,132 @@
     />
     <link rel="stylesheet" href="./src/style.css" />
   </head>
-  <body class="grid place-content-center min-h-[100vh] bg-main-bg text-text-1">
+  <body class="grid place-content-center min-h-[100vh] bg-main text-text-2">
     <main class="container w-[327px]">
-      <header class="relative flex justify-between mb-[32px]">
+      <header
+        class="relative flex justify-between mb-[32px] text-text-header-screen"
+      >
         <h1 class="ml-[7px] text-size-4">calc</h1>
         <div class="absolute right-[97px] text-size-1">THEME</div>
         <div
-          class="relative flex items-center self-end w-[71px] h-[26px] ml-[26px] rounded-[13px] bg-toogle-bg after:content-[''] after:absolute after:right-[5px] after:block after:size-[16px] after:rounded-[50%] after:bg-toggle after:cursor-pointer before:content-['123'] before:absolute before:top-[-30px] before:tracking-[18px] before:pl-[10px] before:text-size-1"
+          class="relative flex items-center self-end w-[71px] h-[26px] ml-[26px] rounded-[13px] bg-toogle after:content-[''] after:absolute after:right-[5px] after:block after:size-[16px] after:rounded-[50%] after:bg-dot after:cursor-pointer before:content-['123'] before:absolute before:top-[-30px] before:tracking-[18px] before:pl-[10px] before:text-size-1"
         ></div>
       </header>
+
       <input
-        placeholder="0,00"
+        placeholder="0.00"
         disabled
-        class="screen placeholder:text-text-1 outline-none w-[327px] mb-[24px] px-[24px] pt-[29px] pb-[22px] rounded-[10px] bg-screen-bg text-size-5 text-right"
+        class="screen text-text-header-screen placeholder:text-text-header-screen outline-none w-[327px] mb-[24px] px-[24px] pt-[29px] pb-[22px] rounded-[10px] bg-screen text-size-5 text-right"
       />
 
       <div
-        class="keypad grid grid-cols-4 gap-[13px] p-[24px] rounded-[10px] bg-keypad-bg text-size-4"
+        class="keypad grid grid-cols-4 gap-[13px] p-[24px] rounded-[10px] bg-keypad text-size-4 text-text-1"
       >
         <button
           data-key="7"
-          class="h-[64px] rounded-[5px] text-text-2 shadow-shadow-1 bg-key-bg-3 hover:bg-key-bg-hover-3"
+          class="h-[64px] rounded-[5px] shadow-key-shadow-1 bg-key-1 hover:bg-key-hover-1"
         >
           7
         </button>
         <button
           data-key="8"
-          class="h-[64px] rounded-[5px] text-text-2 shadow-shadow-1 bg-key-bg-3 hover:bg-key-bg-hover-3"
+          class="h-[64px] rounded-[5px] shadow-key-shadow-1 bg-key-1 hover:bg-key-hover-1"
         >
           8
         </button>
         <button
           data-key="9"
-          class="h-[64px] rounded-[5px] text-text-2 shadow-shadow-1 bg-key-bg-3 hover:bg-key-bg-hover-3"
+          class="h-[64px] rounded-[5px] shadow-key-shadow-1 bg-key-1 hover:bg-key-hover-1"
         >
           9
         </button>
         <button
           data-key="DEL"
-          class="h-[64px] rounded-[5px] text-text-3 text-size-2 shadow-shadow-2 bg-key-bg-1 hover:bg-key-bg-hover-1"
+          class="h-[64px] rounded-[5px] text-text-2 text-size-2 shadow-key-shadow-2 bg-key-2 hover:bg-key-hover-2"
         >
           DEL
         </button>
         <button
           data-key="4"
-          class="h-[64px] rounded-[5px] text-text-2 shadow-shadow-1 bg-key-bg-3 hover:bg-key-bg-hover-3"
+          class="h-[64px] rounded-[5px] shadow-key-shadow-1 bg-key-1 hover:bg-key-hover-1"
         >
           4
         </button>
         <button
           data-key="5"
-          class="h-[64px] rounded-[5px] text-text-2 shadow-shadow-1 bg-key-bg-3 hover:bg-key-bg-hover-3"
+          class="h-[64px] rounded-[5px] shadow-key-shadow-1 bg-key-1 hover:bg-key-hover-1"
         >
           5
         </button>
         <button
           data-key="6"
-          class="h-[64px] rounded-[5px] text-text-2 shadow-shadow-1 bg-key-bg-3 hover:bg-key-bg-hover-3"
+          class="h-[64px] rounded-[5px] shadow-key-shadow-1 bg-key-1 hover:bg-key-hover-"
         >
           6
         </button>
         <button
           data-key="+"
-          class="h-[64px] rounded-[5px] text-text-2 shadow-shadow-1 bg-key-bg-3 hover:bg-key-bg-hover-3"
+          class="h-[64px] rounded-[5px] shadow-key-shadow-1 bg-key-1 hover:bg-key-hover-1"
         >
           +
         </button>
         <button
           data-key="1"
-          class="h-[64px] rounded-[5px] text-text-2 shadow-shadow-1 bg-key-bg-3 hover:bg-key-bg-hover-3"
+          class="h-[64px] rounded-[5px] shadow-key-shadow-1 bg-key-1 hover:bg-key-hover-1"
         >
           1
         </button>
         <button
           data-key="2"
-          class="h-[64px] rounded-[5px] text-text-2 shadow-shadow-1 bg-key-bg-3 hover:bg-key-bg-hover-3"
+          class="h-[64px] rounded-[5px] shadow-key-shadow-1 bg-key-1 hover:bg-key-hover-1"
         >
           2
         </button>
         <button
           data-key="3"
-          class="h-[64px] rounded-[5px] text-text-2 shadow-shadow-1 bg-key-bg-3 hover:bg-key-bg-hover-3"
+          class="h-[64px] rounded-[5px] shadow-key-shadow-1 bg-key-1 hover:bg-key-hover-1"
         >
           3
         </button>
         <button
           data-key="-"
-          class="h-[64px] rounded-[5px] text-text-2 shadow-shadow-1 bg-key-bg-3 hover:bg-key-bg-hover-3"
+          class="h-[64px] rounded-[5px] text-size-2 shadow-key-shadow-1 bg-key-1 hover:bg-key-hover-1"
         >
           -
         </button>
         <button
           data-key="."
-          class="h-[64px] rounded-[5px] text-text-2 shadow-shadow-1 bg-key-bg-3 hover:bg-key-bg-hover-3"
+          class="h-[64px] rounded-[5px] text-size-2 shadow-key-shadow-1 bg-key-1 hover:bg-key-hover-1"
         >
           .
         </button>
         <button
           data-key="0"
-          class="h-[64px] rounded-[5px] text-text-2 shadow-shadow-1 bg-key-bg-3 hover:bg-key-bg-hover-3"
+          class="h-[64px] rounded-[5px] shadow-key-shadow-1 bg-key-1 hover:bg-key-hover-1"
         >
           0
         </button>
         <button
           data-key="/"
-          class="h-[64px] rounded-[5px] text-text-2 shadow-shadow-1 bg-key-bg-3 hover:bg-key-bg-hover-3"
+          class="h-[64px] rounded-[5px] shadow-key-shadow-1 bg-key-1 hover:bg-key-hover-1"
         >
           /
         </button>
         <button
           data-key="*"
-          class="h-[64px] rounded-[5px] text-text-2 shadow-shadow-1 bg-key-bg-3 hover:bg-key-bg-hover-3"
+          class="h-[64px] rounded-[5px] shadow-key-shadow-1 bg-key-1 hover:bg-key-hover-1"
         >
           *
         </button>
         <button
           data-key="RESET"
-          class="col-span-2 h-[64px] rounded-[5px] text-text-1 text-size-2 shadow-shadow-2 bg-key-bg-1 hover:bg-key-bg-hover-1"
+          class="col-span-2 h-[64px] rounded-[5px] text-size-2 text-text-2 shadow-key-shadow-2 bg-key-2 hover:bg-key-hover-2"
         >
           RESET
         </button>
         <button
           data-key="="
-          class="col-span-2 h-[64px] rounded-[5px] text-text-1 text-size-2 shadow-shadow-3 bg-key-bg-2 hover:bg-key-bg-hover-2"
+          class="col-span-2 h-[64px] rounded-[5px] text-size-2 text-text-3 shadow-key-shadow-3 bg-key-3 hover:bg-key-hover-3"
         >
           =
         </button>
