@@ -73,4 +73,14 @@
     font-style: normal;
     line-height: 37px;
   }
+
+  .toggle.theme-light::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .toggle.theme-purple::after {
+    left: auto;
+    right: 5px;
+  }
 }

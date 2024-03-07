@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="purple">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
@@ -21,8 +21,18 @@
         <h1 class="ml-[7px] text-size-4">calc</h1>
         <div class="absolute right-[97px] text-size-1">THEME</div>
         <div
-          class="relative flex items-center self-end w-[71px] h-[26px] ml-[26px] rounded-[13px] bg-toogle after:content-[''] after:absolute after:right-[5px] after:block after:size-[16px] after:rounded-[50%] after:bg-dot after:cursor-pointer before:content-['123'] before:absolute before:top-[-30px] before:tracking-[18px] before:pl-[10px] before:text-size-1"
-        ></div>
+          class="toggle relative flex items-center self-end w-[71px] h-[26px] ml-[26px] rounded-[13px] bg-toogle text-size-1 cursor-pointer hover:after:bg-dot-hover after:content-[''] after:absolute after:left-[5px] after:block after:size-[16px] after:rounded-[50%] after:bg-dot"
+        >
+          <div
+            class="theme-1 after:pointer-events-none relative z-10 w-full h-full after:content-['1'] after:w-full after:absolute after:top-[-30px] after:text-center"
+          ></div>
+          <div
+            class="theme-2 after:pointer-events-none relative z-10 w-full h-full after:content-['2'] after:w-full after:absolute after:top-[-30px] after:text-center"
+          ></div>
+          <div
+            class="theme-3 after:pointer-events-none relative z-10 w-full h-full after:content-['3'] after:w-full after:absolute after:top-[-30px] after:text-center"
+          ></div>
+        </div>
       </header>
 
       <input
