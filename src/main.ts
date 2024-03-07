@@ -40,6 +40,7 @@ const handleResetKey = () => {
 const handleDelKey = () => {
   const removeLastCharacter = operation.slice(0, -1);
   operation = removeLastCharacter;
+  screenEl.value = operation;
 };
 
 const handleOtherKey = (valueKey: string) => {
