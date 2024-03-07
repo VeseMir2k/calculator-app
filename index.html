@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./src/style.css" />
   </head>
   <body class="grid min-h-[100vh] place-content-center bg-main text-text-2">
-    <main class="container w-[327px]">
+    <main class="container w-[327px] md:w-[540px]">
       <header
         class="relative mb-[32px] flex justify-between text-text-header-screen"
       >
@@ -37,11 +37,11 @@
       <input
         placeholder="0.00"
         disabled
-        class="screen mb-[24px] w-[327px] rounded-[10px] bg-screen px-[24px] pb-[22px] pt-[29px] text-right text-size-5 text-text-header-screen outline-none placeholder:text-text-header-screen placeholder:opacity-20"
+        class="screen mb-[24px] w-[327px] rounded-[10px] bg-screen px-[24px] pb-[22px] pt-[29px] text-right text-size-5 text-text-header-screen outline-none placeholder:text-text-header-screen placeholder:opacity-20 md:w-[540px] md:px-[32px] md:pb-[36px] md:pt-[40px] md:text-size-6"
       />
 
       <div
-        class="keypad grid grid-cols-4 gap-[13px] rounded-[10px] bg-keypad p-[24px] text-size-4 text-text-1"
+        class="keypad grid grid-cols-4 gap-[13px] rounded-[10px] bg-keypad p-[24px] text-size-4 text-text-1 md:gap-[24px] md:p-[32px] md:text-size-5"
       >
         <button
           data-key="7"
