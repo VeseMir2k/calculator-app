@@ -57,10 +57,13 @@ const handleToggleButton = () => {
     btn.addEventListener('click', () => {
       if (index === 1) {
         updateTheme('theme-purple', 'theme-light', 'light');
+        localStorage.setItem('theme', 'light');
       } else if (index === 2) {
         updateTheme('theme-light', 'theme-purple', 'purple');
+        localStorage.setItem('theme', 'purple');
       } else {
         resetTheme('theme-light', 'theme-purple');
+        localStorage.removeItem('theme');
       }
     });
   });
@@ -78,9 +81,24 @@ const resetTheme = (remove_1: string, remove_2: string) => {
   dot.classList.remove(remove_2);
 };
 
+const prefersColorSchema = () => {
+  if (
+    (window.matchMedia('(prefers-color-scheme: light)').matches &&
+      !('theme' in localStorage)) ||
+    localStorage.theme === 'light'
+  ) {
+    updateTheme('theme-purple', 'theme-light', 'light');
+  } else if (localStorage.theme === 'purple') {
+    updateTheme('theme-light', 'theme-purple', 'purple');
+  } else {
+    resetTheme('theme-light', 'theme-purple');
+  }
+};
+
 const init = () => {
   handleKey();
   handleToggleButton();
+  prefersColorSchema();
 };
 
 init();
